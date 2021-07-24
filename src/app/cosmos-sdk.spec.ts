@@ -1,6 +1,8 @@
 
 import { cosmosclient, rest, proto } from 'cosmos-client';
 
+//test
+
 describe('bank', () => {
     it('send', async () => {
       expect.hasAssertions();

@@ -24,7 +24,7 @@
     ],
     "allowSyntheticDefaultImports": true, //cosmoscanに合わせ追加(defaultからの変更点1),
     "types": [   //net情報で追加
-      "node",
+    //  "node",    //tsconfig.app.jsonに追加。
       "jest"
     ]
   },
