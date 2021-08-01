@@ -1,0 +1,45 @@
+<p>input works!</p>
+
+<p>node :{{this.txService.node_url}}</p>
+<p>id :{{this.txService.chain_id}}</p>
+
+<div>
+  <label id="add">from address : {{default_address}} </label>
+</div>
+
+<div>
+  <label id="add">To address : {{l_address}} </label>
+</div>
+
+
+<div>
+  <label id="add">address: </label>
+  <input id="add"
+      [(ngModel)]="l_address"
+      placeholder="address" >
+</div>
+
+<div>
+  set default address
+  <button class="add-button"
+  (click)="settxt()" >set</button>
+</div>
+
+<div>
+  set address from nemonic
+  <button class="add-button"
+  (click)="this.txService.address_from_nemonic().then()" >nemonic</button>
+</div>
+
+
+<p>
+  get address Balance
+  <button class="add-button"
+  (click)="this.txService.getBalance(l_address)"
+  routerLink="/output" >getBalance</button>
+</p>
+
+<div>
+  <button class="tx" (click)="this.txService.tx(l_address)" >tx</button>
+</div>
+

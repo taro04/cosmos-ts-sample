@@ -2,17 +2,17 @@
 import { cosmosclient, rest, proto } from 'cosmos-client';
 
 //test
-
 describe('bank', () => {
     it('send', async () => {
       expect.hasAssertions();
-      const sdk = new cosmosclient.CosmosSDK('http://localhost:1317', 'testchain');
+      const sdk = new cosmosclient.CosmosSDK('http://localhost:1317', 'mars');
       const privKey = new proto.cosmos.crypto.secp256k1.PrivKey({
-        key: await cosmosclient.generatePrivKeyFromMnemonic('joke door law post fragile cruel torch silver siren mechanic flush surround'),
+        //aliceのaddress
+        key: await cosmosclient.generatePrivKeyFromMnemonic('now snap lottery error party involve double write palace letter merge cricket easy recall erupt swamp tornado buyer reopen arrive have angle dinner derive'),
       });
       const pubKey = privKey.pubKey();
       const address = cosmosclient.AccAddress.fromPublicKey(pubKey);
-      expect(address.toString()).toStrictEqual('cosmos14ynfqqa6j5k3kcqm2ymf3l66d9x07ysxgnvdyx');
+      expect(address.toString()).toStrictEqual('cosmos1qqva4829ujj4vrl9nxk6sc7nv8mn08zrjj3k5e');
       const fromAddress = address;
       const toAddress = address;
 
