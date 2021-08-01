@@ -1,0 +1,24 @@
+<p>output works!</p>
+
+<div>
+  <p>balance</p>
+  <p>Address : {{this.txService.address}}</p>
+  <ng-container *ngFor='let denom of denoms'>
+    <p>Token : {{denom.denom}}
+      Balance : {{denom.amount}}</p>
+  </ng-container>
+</div>
+
+<!--
+<ng-container *ngIf="this.txService.balances$ | async as balances">
+  <ng-container *ngFor='let denom of balances'>
+    <p>Token2str : {{denom}}</p>
+  </ng-container>
+</ng-container>
+-->
+
+<div>
+  <button class="add-button"
+  routerLink="/input" >
+  back</button>
+</div>
